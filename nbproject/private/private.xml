@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/excepciones/LimiteRecursosException.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/recursos/TrabajoInvestigacion.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/gestores/GestorRecursos.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/excepciones/CategoriaInvalidaException.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/interfaces/Clasificable.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/interfaces/FiltroRecurso.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/excepciones/RecursoNoEncontradoException.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/recursos/Articulo.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/Main.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/recursos/RecursoAcademico.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/interfaces/Evaluable.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaAcademico/src/universidad/recursos/Libro.java</file>
+        </group>
+    </open-files>
+</project-private>
