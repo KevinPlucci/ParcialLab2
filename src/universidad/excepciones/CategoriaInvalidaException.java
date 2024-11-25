@@ -4,9 +4,6 @@ package universidad.excepciones;
  * Excepción personalizada que indica que una categoría no es válida dentro del sistema.
  * Esta clase extiende de la clase base {@link Exception}.
  * 
- * <p>Se utiliza principalmente para manejar errores específicos relacionados 
- * con la validación o procesamiento de categorías en el contexto de la universidad.</p>
- * 
  * @author Kevin Plucci
  */
 public class CategoriaInvalidaException extends Exception {

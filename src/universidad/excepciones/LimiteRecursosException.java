@@ -4,9 +4,6 @@ package universidad.excepciones;
  * Excepción personalizada que indica que se ha alcanzado el límite de recursos permitidos en el sistema.
  * Esta clase extiende de la clase base {@link Exception}.
  * 
- * <p>Se utiliza para manejar errores relacionados con la asignación o el uso excesivo 
- * de recursos en el contexto de la universidad.</p>
- * 
  * @author Kevin Plucci
  */
 public class LimiteRecursosException extends Exception {
