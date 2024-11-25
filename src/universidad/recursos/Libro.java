@@ -1,10 +1,6 @@
 package universidad.recursos;
 
-import java.time.LocalDate;  // Importación de LocalDate
-/**
- *
- * @author Usuario
- */
+import java.time.LocalDate;
 
 /**
  * Clase que representa un libro como recurso académico.
@@ -53,5 +49,4 @@ public class Libro extends RecursoAcademico {
     public boolean esLibroDigital() {
         return editorial.equalsIgnoreCase("Digital");
     }
-    
 }

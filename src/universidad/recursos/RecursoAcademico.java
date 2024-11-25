@@ -1,10 +1,6 @@
 package universidad.recursos;
 
-/**
- *
- * @author Kevin Plucci
- */
-
+import universidad.excepciones.CategoriaInvalidaException; // Importación correcta de la excepción
 import java.time.LocalDate;
 
 /**
@@ -15,6 +11,7 @@ public abstract class RecursoAcademico {
     protected String titulo;
     protected LocalDate fechaCreacion;
     protected String autor;
+    protected String categoria;
 
     // Constructor
     public RecursoAcademico(String identificador, String titulo, LocalDate fechaCreacion, String autor) {
@@ -32,6 +29,24 @@ public abstract class RecursoAcademico {
     // Métodos abstractos
     public abstract double calcularRelevancia();
     public abstract void mostrarDetalles();
+
+    // Método para asignar categoría con validación
+    public void asignarCategoria(String categoria) throws CategoriaInvalidaException {
+        // Lista de categorías válidas
+        String[] categoriasValidas = {"Ciencia", "Tecnología", "Matemáticas"};
+        boolean categoriaValida = false;
+        
+        for (String categoriaValidaStr : categoriasValidas) {
+            if (categoriaValidaStr.equalsIgnoreCase(categoria)) {
+                categoriaValida = true;
+                break;
+            }
+        }
+        
+        if (!categoriaValida) {
+            throw new CategoriaInvalidaException("La categoría '" + categoria + "' no es válida.");
+        }
+        
+        this.categoria = categoria; // Asigna la categoría si es válida
+    }
 }
-
-
