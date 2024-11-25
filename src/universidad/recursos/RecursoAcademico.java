@@ -1,11 +1,8 @@
 package universidad.recursos;
 
-import universidad.excepciones.CategoriaInvalidaException; // Importación correcta de la excepción
+import universidad.excepciones.CategoriaInvalidaException;
 import java.time.LocalDate;
 
-/**
- * Clase abstracta que representa un recurso académico genérico.
- */
 public abstract class RecursoAcademico {
     protected String identificador;
     protected String titulo;
@@ -19,6 +16,11 @@ public abstract class RecursoAcademico {
         this.titulo = titulo;
         this.fechaCreacion = fechaCreacion;
         this.autor = autor;
+    }
+
+    // Getter para el identificador
+    public String getIdentificador() {
+        return identificador;
     }
 
     // Getter para el título

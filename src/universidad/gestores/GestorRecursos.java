@@ -3,6 +3,7 @@ package universidad.gestores;
 import universidad.recursos.RecursoAcademico;
 import universidad.excepciones.LimiteRecursosException;
 import universidad.interfaces.FiltroRecurso;
+import universidad.excepciones.RecursoNoEncontradoException;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -30,11 +31,16 @@ public class GestorRecursos {
      * @param recurso El recurso académico que se desea registrar.
      * @throws LimiteRecursosException Si se alcanza el límite de recursos.
      */
-    public void registrarRecurso(RecursoAcademico recurso) throws LimiteRecursosException {
-        if (recursos.size() >= LIMITE_RECURSOS) {
-            throw new LimiteRecursosException("Se ha alcanzado el límite de recursos permitidos.");
+    public void registrarRecurso(RecursoAcademico recurso) {
+        try {
+            if (recursos.size() >= LIMITE_RECURSOS) {
+                throw new LimiteRecursosException("Se ha alcanzado el límite de recursos permitidos.");
+            }
+            recursos.add(recurso);
+        } catch (LimiteRecursosException e) {
+            // Manejo de la excepción, por ejemplo, registrar el error en un log o mostrar un mensaje al usuario
+            System.out.println(e.getMessage());
         }
-        recursos.add(recurso); // Agrega el recurso a la lista de recursos
     }
 
     /**
@@ -68,4 +74,20 @@ public class GestorRecursos {
         System.out.println("Total de recursos registrados: " + recursos.size());
         recursos.forEach(RecursoAcademico::mostrarDetalles);
     }
+
+    /**
+     * Busca un recurso por su identificador.
+     * 
+     * @param identificador El identificador del recurso a buscar.
+     * @return El recurso encontrado, o null si no se encuentra.
+     */
+    public RecursoAcademico buscarRecurso(String identificador) throws RecursoNoEncontradoException {
+        for (RecursoAcademico recurso : recursos) {
+            if (recurso.getIdentificador().equals(identificador)) {
+                return recurso;
+            }
+        }
+        throw new RecursoNoEncontradoException("El recurso con identificador " + identificador + " no existe.");
+    }
+
 }
